@@ -1,0 +1,166 @@
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("fonts/SourceSansPro-Bold.otf") format("otf");
+}
+body {
+    font-family: "Source Sans Pro" !important;
+
+}
+
+.btn-modal {
+    margin: 20px 20px;
+}
+.progress-title {
+    margin-top: 30px;
+}
+hr {
+    margin-top: 0.6rem !important;
+}
+.pwd-required,.required, .file-required {
+    color:red;
+}
+.pwd-required, .file-required{
+    display:none;
+}
+.modals {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scaleX(1.1) scaleY(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    font-family: "Source Sans Pro";
+}
+.modals-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 0rem 0rem 0rem 1rem;
+    width: 80%;
+    min-width: 870px;
+    height:25rem;
+    border-radius: 0.6rem;
+}
+.close-button {
+    float: left;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+}
+.close-button:hover {
+    background-color: white;
+}
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scaleX(1.0) scaleY(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-area {
+    margin-left: -10px;
+    margin-bottom: 20px;
+}
+
+.upload-area {
+    float:left;
+    width: 30%;
+    min-width: 180px;
+    margin-right:20px;
+}
+
+.btn-upload {
+    float:right;
+}
+
+.progress-area {
+    margin-left:32%;
+    background-color:darkgray;
+    border: black 1px;
+    width: 68.1%;
+    min-width: 450px;
+    height:100%;
+    border-top-right-radius: 0.6rem;
+    border-bottom-right-radius: 0.6rem;
+    color:white;
+}
+
+.progress-bars{
+    border: 1px solid rgb(94,240,183);
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+}
+
+progress::-moz-progress-bar { background: rgb(94,240,183); }
+progress::-webkit-progress-bar { background: #e6e6e6; }
+progress::-webkit-progress-value  { background: rgb(94,240,183); }
+
+.progress-content {
+    padding: 20px 20px;
+}
+
+.file-list {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 290px;
+}
+
+table {
+    width:100%;
+    border-collapse: separate !important;
+    border-spacing:0px 10px !important;
+}
+
+th,td {
+    padding: 5px 10px;
+
+}
+tr td:first-child { border-top-left-radius: 6px; }
+tr td:last-child { border-top-right-radius: 6px; }
+tr td:first-child { border-bottom-left-radius: 6px; }
+tr td:last-child { border-bottom-right-radius: 6px; }
+
+table tbody tr {
+    background-color: slategrey;
+
+}
+
+.div-image {
+    float: right;
+    margin-top: -23px;
+}
+.div-progress{
+    width: 95%;
+    height: 20px;
+    /*border: 1px solid #ccc;*/
+    border-radius: 4px;
+    /*margin-top: 10px;*/
+    position: relative;
+}
+
+.div-progress>span{
+    display: inline-block;
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(94,240,183);
+    transition: width 0.3s ease-out;
+}
+
+.upload-error{
+    font-size: 0.6em;
+    margin-bottom: -20px;
+    color:orange;
+}

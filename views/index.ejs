@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>File Upload Demo</title>
+    <link rel="stylesheet" href="/stylesheets/upload.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/bootstrap.min.js"></script>
+    <script src="/javascripts/nacl.min.js"></script>
+    <script src="/javascripts/nacl-util.min.js"></script>
+  </head>
+  <body>
+    <form enctype="multipart/form-data">
+        <div class="modals">
+            <div class="modals-content">
+                <div class="upload-area">
+                    <div class="close-area"><span class="close-button">×</span></div>
+                    <br>
+                    <div>
+                        <h2><span>File Upload</span></h2>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>
+                            Enter Password to Encrypt Files
+                            <span class="required">*</span>
+                        </span>
+                        <input type="password" class="form-control" id="pwd"/>
+                        <span class="pwd-required">Please enter to password.</span>
+                    </div>
+                    <hr>
+                    <div>
+                        <span>Upload File</span>
+                        <textarea class="form-control" id="text-areas-files" rows="3" readonly></textarea>
+                        <span class="file-required">Please select your file.</span>
+                    </div>
+                    <br>
+                    <button class="btn btn-outline-primary" id="btn-browser" onclick="browserFiles();return false;">Browse</button>
+                    <button class="btn btn-outline-primary btn-upload" id="btn-upload" onclick="readFiles();return false;">Upload</button>
+                </div>
+                <div class="progress-area">
+                    <div class="progress-content">
+                        <div class="progress-title">
+                            <h3><span >Progress</span></h3>
+                        </div>
+                        <hr>
+                        <div class="file-list">
+                            <table class="table-borderless tab-content">
+                                <thead>
+                                    <tr>
+                                        <th>DATE</th>
+                                        <th>NAME</th>
+                                        <th>PROGRESS</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-progress">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <button class="trigger btn btn-primary btn-modal">Click here to upload</button>
+    <script src="/javascripts/upload.js"></script>
+  </body>
+</html>
